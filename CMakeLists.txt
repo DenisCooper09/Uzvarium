@@ -16,3 +16,5 @@ add_subdirectory(src bin)
 target_include_directories(Uzvarium PRIVATE include)
 
 include(cmake/Vulkan.cmake)
+
+target_link_options(Uzvarium PRIVATE -static)
