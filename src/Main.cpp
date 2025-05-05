@@ -1,8 +1,13 @@
-#include <iostream>
-#include <vulkan/vulkan.h>
+#include "Application.hpp"
 
 int main()
 {
-    std::cout << "I love drinking uzvar.\n";
-    vkDestroyInstance(nullptr, nullptr);
+    try
+    {
+        Uz::Application app;
+    }
+    catch (const std::exception& exception)
+    {
+        std::cerr << "[UZVARIUM] Error: " << exception.what() << '\n';
+    }
 }
